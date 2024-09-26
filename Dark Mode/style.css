@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121; 
+}
+
+.dark-theme{
+    --primary-color: #18191f;
+    --secondary-color: #fff;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  20px  40px;
+}
+
+nav li{
+    display: inline-block;
+}
+
+#icon{
+    height: 7vh;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    animation: moon-style 1s ease;
+}
+
+@keyframes moon-style{
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#icon:hover{
+    scale: 1.2;
+    transition: 0.2s ease;
+}
+
+nav li a{
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(255, 133, 45);
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(39, 230, 255);
+    text-shadow: 0 0 3px black;
+}
+
+.rohan img{
+    margin-left: 800px;
+    height: 70vh;
+    margin-top: -300px;
+}
+
+@media (max-width: 750px){
+    .rohan img{
+        height: 39vh;
+        margin-left: 400px;
+        flex-direction: column;
+        text-align: center;
+        margin-top: -60px;
+    }
+}
+
+.info{
+    margin-top: 160px;
+    margin-left: 40px;
+}
+
+.info h1{
+    font-size: 40px;
+    color: var(--secondary-color);
+    animation: info-h1 1s ease;
+}
+
+@keyframes info-h1 {
+    0%{
+        transform: translateX(-150px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.info span{
+    color: rgb(255, 133, 45);
+}
+
+.info p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    animation: info-p 1s ease;
+}
+
+@keyframes info-p{
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+button{
+    padding: 11px 24px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 12px;
+    border: transparent;
+    animation: btn-style 1s;
+}
+
+@keyframes btn-style{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.social{
+    font-size: 25px;
+}
+.social i{
+    margin-right: 15px;
+    color: var(--secondary-color)
+}
+

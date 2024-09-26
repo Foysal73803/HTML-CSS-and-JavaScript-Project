@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: slategray;
+    
+}
+
+.wrapper img{
+    animation: img-animate 1.2s ease;
+}
+
+@keyframes img-animate {
+    0%{
+        transform: translateY(600px);
+    }
+}
+
+body .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    animation: wrapper-aninmatye 1s ease;
+}
+
+@keyframes  wrapper-aninmatye{
+    0%{
+        transform: translateY(-300px);
+    }
+    50%{
+        scale: 1.1;
+    }
+}
+
+.wrapper{
+    background-color: white;
+    width: 440px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px;
+    flex-direction: column;
+    margin-left: -25px;
+}
+
+.wrapper h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    text-shadow: 0 0 1.5px rgb(0, 0, 0);
+}
+
+.wrapper .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .content.disable{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.content .column{
+    border: 1px solid #999;
+    padding:  10px;
+    border-radius: 8px;
+    width: calc(100% / 3 - 5px);
+}
+
+.column select{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.wrapper button{
+    margin-top: 30px;
+    padding: 10px 80px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transition: 0.2s ease-in;
+}
+
+.wrapper button:hover{
+    color: black;
+    background-color: wheat;
+    scale: 1.1;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
