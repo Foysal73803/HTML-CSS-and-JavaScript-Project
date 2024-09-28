@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    ---main-color: rgb(2, 183, 255);
+    --main-box-color: rgb(230, 212, 181);
+    --header-color: rgb(8, 96, 228);
+    --border-color: #4d4343;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(---main-color);
+}
+
+.wrapper{
+    background-color: var(--main-box-color);
+    width: 400px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px white;
+    animation: wrapper-animate 1.1s ease;
+}
+
+@keyframes wrapper-animate{
+    0%{
+        transform: translateY(-400px);
+    }
+    50%{
+        scale: 1.1;
+    }
+}
+
+.wrapper header{
+    color: var(--header-color);
+    font-size: 21px;
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+}
+
+
+.input-part .info-text{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--border-color);
+    color: var(---main-color);
+}
+
+.info-text.error{
+    display: block;
+    background-color: rgb(235, 34, 34);
+    color: white;
+}
+
+.info-text.pending{
+    background-color: aqua;
+    color: black;
+}
+
+.input-part  :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.input-part input{
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.input-part input:is(:focus, :valid){
+    border: 1px solid var(---main-color);
+}
+
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator::before{
+    content: "or";
+    color: var(---main-color);
+    padding: 0 15px;
+    font-size: 19px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.input-part button{
+    background-color: var(--border-color);
+    color: var(---main-color);
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.input-part button:hover{
+    scale: 1.1;
+    transform: translateY(-5px);
+    transition: 0.2s ease;
+}
+
+.wrapper .weather-part{
+    display: none;
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+
+.weather-part .temp .deg{
+    display: block;
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+
+.weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location{
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    border-top: 1px solid var(--border-color);
+    justify-content: space-between;
+}
+
+.bottom-details .column{
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i{
+    color: var(---main-color);
+    font-size: 40px;
+    text-shadow: 0 0 4px black;
+}
+
+.column.humidity{
+    border-left: 1px solid var(--border-color);
+}
+
+.temp .numb{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+#this-humidity{
+    margin-top: 10px;
+}
+

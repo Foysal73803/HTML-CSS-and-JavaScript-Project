@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+    <!--Linking BoxIcon for Icon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Weather App</header>
+        <section class="input-part">
+            <p class="info-text ">Please enter a valid city name</p>
+            <input type="text" placeholder="Enter city name" required>
+            <div class="separator"></div>
+            <button>Get Device Location</button>
+        </section>
+        <section class="weather-part">
+            <img src="images/404.png" alt="weather icon">
+            <div class="temp">
+                <span class="numb" style="font-size: 50px;">--</span>
+                <span class="deg">°</span>
+                <span style="font-size: 45px; margin-top: 20px; font-weight: bold;">C</span>
+            </div>
+            <div class="weather">--</div>
+            <div class="location">
+                <i class="bx bx-map"></i>
+                <span>--</span>
+            </div>
+            <div class="bottom-details">
+                <div class="column feels" style="margin-top: -10px;">
+                    <i class="bx bxs-thermometer"></i>
+                    <div class="details">
+                        <div class="temp">
+                        <span class="numb-2" style="font-size: 30px; margin-top: 15px;">--</span>
+                        <span class="deg">°C</span>
+                        </div>
+                            <p style="margin-top: -5px;">Feels like</p>
+                    </div>
+                </div>
+                <div class="column humidity" id="this-humidity" style="margin-top: 6px;">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="details">
+                        <span class="numb" style="font-weight: bold; font-size: 25px;">--</span>
+                        <p style="margin-top: 3px;">Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <script src="weather.js"></script>
+</body>
+</html>
