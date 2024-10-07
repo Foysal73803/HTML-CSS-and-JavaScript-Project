@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    behavior: smooth;
+}
+
+:root{
+    --primary-color: #d1d7e4;
+    --secondary-color: #0e0d0d;
+}
+.dark-theme{
+    --primary-color: #0e0d0d;
+    --secondary-color: white;
+}
+
+
+
+/*Header secton // section-one*/
+body{
+    background-color: var(--primary-color);
+}
+
+.header{
+    background: linear-gradient(rgb(196, 235, 208), rgb(137, 196, 157));
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: 2s ease-in;
+}
+
+header:hover{
+    background: linear-gradient(rgb(137, 196, 157), rgb(196, 235, 208));
+    transition: 2s ease;
+}
+
+.logo img{
+    height: 60px;
+    width: 60px;
+    padding-left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header .navbar{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#icon{
+    height: 40px;
+    cursor: pointer;
+    margin-top: 7px;
+    margin-right: 10px;
+    transition: 0.2s ease-in;
+    animation: icon-animate 1s ease;
+}
+
+@keyframes icon-animate{
+    0%{
+        transform: translateY(-60px);
+    }
+    40%{
+        scale: 1.2;
+    }
+}
+
+#icon:hover{
+    scale: 1.1;
+    transition: 0.2s ease;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 16px 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--secondary-color);
+    transition: 0.2s ease-in;
+}
+
+.navbar ul li a:hover{
+    color: chocolate;
+    transition: 0.2s ease;
+}
+
+#menu-btn{
+    cursor: pointer;
+    color: var(--secondary-color);
+    display: none;
+}
+
+#close-menu-btn{
+    cursor: pointer;
+    color: var(--secondary-color);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 414px){
+    header.show-mobile-menu::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 400%;
+        width: 100%;
+        backdrop-filter: blur(1px);
+    }
+    #menu-btn, #close-menu-btn{
+        display: block;
+    }
+    #menu-btn{
+        margin-left: 15px;
+    }
+    .navbar ul{
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        background-color: var(--primary-color);
+        height: 100vh;
+        padding: 20px 50px;
+        transition: left 0.15s ease;
+    }
+    .navbar ul li{
+        flex-direction: column;
+    }
+    header.show-mobile-menu .navbar ul{
+        left: 0;
+    }
+}
+
+/*hero // section-two*/
+
+.main-hero{
+    margin-top: 25vh;
+    color: var(--secondary-color);
+    padding: 30px;
+}
+
+
+.main-hero h1{
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: var(--secondary-color);
+}
+
+.main-hero h2{
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+.main-hero p{
+    margin-bottom: 15px;
+    line-height: 1.3;
+    letter-spacing: 0.7px;
+    color: var(--secondary-color);
+}
+
+.main-hero .btn-1{
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.main-hero .btn-1:hover{
+   color: black;
+   background-color: white;
+}
+.bit-1{
+    border: 1px solid var(--secondary-color);
+    margin-top: 29vh;
+}
+
+/*services-section*/
+
+.container-first{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.card-item img{
+    height: 40vh;
+    border-radius: 7px;  
+}
+
+.services-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list .card-item{
+    color: var(--secondary-color);
+    width: 400px;
+    background-color: rgb(155, 175, 218);
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+}
+
+.card-list .card-item:hover{
+    background-color: rgb(167, 181, 212);
+}
+
+.card-list .card-item .user-image{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 2px solid var(--secondary-color);
+    padding: 2px;
+}
+
+.card-list .card-item .user-profession{
+    margin: 14px 0 20px;
+}
+
+.card-list .card-item .message-button{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.slider-wrapper{
+    width:410px;
+}
+
+.slider-wrapper .swiper-pagination{
+    background-color: var(--secondary-color);
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+}
+
+.slider-wrapper .slider-button{
+    background-color: var(--secondary-color);
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .slider-button:hover{
+    scale: 1.1;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.bit-2{
+    border: 1px solid var(--secondary-color);
+    margin-top: 20vh;
+}
+
+/* section-four*/
+
+.section-four .wrapper{
+    margin-left: 5px;
+    transform: translateY(5px);
+}
+
+.section-four .wrapper .toast{
+   background-color: rgb(137, 196, 157);
+   padding: 10px 15px 10px 20px;
+   width: 230px;
+   margin-top: -5px;
+   border-radius: 20px;
+   box-shadow: 0 0 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border: 1px solid var(--secondary-color);
+}
+
+.wrapper .toast.offline{
+    border-color: red;
+}
+
+.toast.offline .content #icon{
+    background-color: #ccc;
+}
+
+.section-four .close-icon{
+    transform: translateX(10px);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 17px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toast{
+    animation: toast-animate 1s ease;
+}
+
+@keyframes toast-animate{
+    0%{
+        transform: translateX(300px);
+    }
+}
+
