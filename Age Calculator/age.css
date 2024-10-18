@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgb(190, 187, 230);   
+}
+
+.container{
+    width: 300px;
+    background-color: rgb(182, 231, 160);
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 30vh;
+    position: absolute;
+    margin-left: 500px;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.input-box{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px;
+    flex: 1;
+    position: relative;
+    border: none;
+    background-color: rgb(186, 208, 228);
+    border-radius: 7px;
+}
+
+button{
+    text-align: center;
+    position: relative;
+    margin-left: 27%;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: antiquewhite;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 6px black;
+    transition: 0.2s ease-in;
+}
+button:hover{
+    box-shadow: 0 0 0 2px;
+    transform: translateY(2px);
+    transition: 0.1s ease;
+}
+
+
+@media screen and (max-width: 400px){
+    .container{
+        margin-left: 100px;
+        margin-top: 100px
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        margin-left: 50px;
+        margin-top: 100px
+    }
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        margin-left: 50px;
+        margin-top: 100px
+    }
+}
+
+
+
