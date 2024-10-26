@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark-theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: rgb(233, 213, 213);
+    padding: 50px;
+    border-radius: 7px;
+}
+
+.container img{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -30px;
+    height: 7vh;
+    cursor: pointer;
+}
+
+.container .display-time, .timer-Btn{
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.display-time{
+    font-size: 40px;
+    font-family: monospace;
+    color: var(--primary-color);
+}
+
+button{
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: 0.2s ease-in;
+    margin-left: 5px;
+}
+
+button:hover{
+    border: 1px solid white;
+    scale: 1.1;
+    transform: translateY(-2px);
+}
+
+#startBtn{
+    background-color: rgb(25, 235, 25);
+}
+
+#stopBtn{
+    background-color: red;
+}
+
+#resettBtn{
+    background-color: rgb(25, 235, 25);
+}
+
+@media screen and (max-width: 510px){
+    .container{
+        height: 200px;
+        width: 380px;
+    } 
+}
