@@ -1,0 +1,125 @@
+/**********main-css**********/
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: rgb(140, 162, 224);
+}
+
+.container{
+  align-items: center;
+  text-align: center;
+  background-color: rgb(187, 230, 230);
+  transform: translateY(40px);
+  padding: 30px;
+  max-width: 450px;
+  border-radius: 7px;
+  margin-left: 400px;
+  box-shadow: 0 0 7px rgb(224, 215, 215);
+  animation: container-animate 1s ease;
+}
+
+.container .search-wrapper #country-inp{
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid rgb(184, 150, 86);
+  border-top: 2px solid rgb(184, 150, 86);
+  border-left: 2px solid rgb(93, 197, 33);
+  border-right: 2px solid rgb(93, 197, 33);
+  padding: 10px;
+  border-radius: 7px;
+  transition: 0.2s ease-in;
+  box-shadow: 0 0 2px rgb(93, 197, 33);
+}
+
+.container .search-wrapper #country-inp:hover{
+  scale: 1.2;
+  border-bottom: 2px solid rgb(93, 197, 33);
+  border-top: 2px solid rgb(93, 197, 33);
+  border-left: 2px solid rgb(184, 150, 86);
+  border-right: 2px solid rgb(184, 150, 86);
+  box-shadow: 0 0 2px rgb(184, 150, 86);
+}
+
+.container .search-wrapper #search-btn{
+  border: none;
+  background-color: rgb(135, 178, 235);
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 1px black;
+  padding: 10px 19px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 40px;
+  box-shadow: 0 0 3px black;
+  transition: 0.2s ease-in;
+}
+
+.container .search-wrapper #search-btn:hover{
+  background-color: rgb(140, 162, 224);
+  scale: 0.97;
+}
+
+/*******from js********/
+
+.container .flag-img{
+  width: 230px;
+  height: 110px;
+  margin-top: 20px;
+  border-radius: 7px;
+  align-items: center;
+  transition: 0.2s ease-in;
+}
+
+.container .flag-img:hover{
+  scale: 1.2;
+}
+
+.Country-name{
+  border-bottom: 2px solid black;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.container .all-data span{
+  color: rgb(51, 50, 50);
+}
+
+/**********keyframes************/
+
+@keyframes container-animate{
+  0%{
+    transform: translateY(-50px);
+  }
+}
+
+/************Responsive*************/
+
+@media screen and (max-width: 500px){
+  .container{
+  margin: auto;
+  }
+  .container .search-wrapper #country-inp{
+    font-size: 12px;
+  }
+  .Country-name{
+    border-bottom: 2px solid black;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .container{
+    margin:auto;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .container{
+  margin: auto;
+  }
+}
