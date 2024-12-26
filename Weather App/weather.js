@@ -4,7 +4,7 @@ infoTxt = inputPart.querySelector(".info-text"),
 inputField =inputPart.querySelector("input"),
 locationBtn = inputPart.querySelector("button"),
 wIcon = document.querySelector(".weather-part img");
-const apiKey = '96fe7a67f2bff3ea8bedff82d2793614';
+const apiKey = '---------------------------------';
 
 let api;
 
